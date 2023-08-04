@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block page_content %}
+
+
+{% block style_content %}
+<link rel="stylesheet" href="{% static 'Gallery/css/style.css' %}">
+{% endblock %}
+
+<h2>{{ page_title }}</h2>
+
+<div>
+  {% include "Gallery/_categories.html" %}
+</div>
+
+<div>
+  {% include "Gallery/_images.html" %}
+</div>
+
+{% endblock %}
+
+
+{% block script_content %}
+  <script src="{% static 'Gallery/scripts/main.js' %}"></script>
+{% endblock %}
+
+
